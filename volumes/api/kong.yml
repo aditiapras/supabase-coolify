@@ -182,6 +182,11 @@ services:
         strip_path: true
         paths:
           - /storage/v1/
+      - name: request-transformer
+        config:
+          add:
+            headers:
+              - "Forwarded: proto=https"
     plugins:
       - name: cors
 
